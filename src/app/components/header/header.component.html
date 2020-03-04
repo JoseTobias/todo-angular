@@ -1,0 +1,16 @@
+<nav class='navbar navbar-dark bg-dark'>
+    <div class='container flex-nowrap justify-content-center'>
+      <div class='navbar-header'>
+        <a [routerLink]="['/']" class='navbar-brand'>
+          <i class='far fa-calendar-check'></i> TodoApp
+        </a>
+      </div>
+
+      <div id='navbar' class='navbar-collapse d-none d-md-flex'>
+        <ul class='nav navbar-nav flex-row'>
+          <li class='pl-3 pr-3'><a [routerLink]="['/']" class='text-light text-decoration-none'>Tarefas</a></li>
+          <li class='pl-3 pr-3'><a [routerLink]="['/about']" class='text-light text-decoration-none'>Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
