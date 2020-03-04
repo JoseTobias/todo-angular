@@ -1,1 +1,25 @@
-<p>todo-list works!</p>
+<table class='table'>
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th class='tableActions'>Ações</th>
+      </tr>
+    </thead>
+    <!-- <tbody v-for="todo in todos" :key="todo.id"> -->
+    <tbody>
+      <tr>
+        <td>teste</td>
+        <td>
+          <button class='btn btn-success' *ngIf="true">
+            <i class='fas fa-check'></i>
+          </button>
+          <button class='btn btn-warning' *ngIf="false">
+            <i class='fas fa-undo'></i>
+          </button>
+          <button class='btn btn-danger' *ngIf="false">
+            <i class='fas fa-trash'></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+</table>
