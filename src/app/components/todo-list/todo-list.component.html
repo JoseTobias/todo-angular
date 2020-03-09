@@ -5,18 +5,17 @@
         <th class='tableActions'>Ações</th>
       </tr>
     </thead>
-    <!-- <tbody v-for="todo in todos" :key="todo.id"> -->
-    <tbody>
+    <tbody *ngFor="let todo of todos">
       <tr>
-        <td>teste</td>
+        <td>{{ todo.description }}</td>
         <td>
-          <button class='btn btn-success' *ngIf="true">
+          <button class='btn btn-success' *ngIf="!todo.done" (click)="marked(todo, true)">
             <i class='fas fa-check'></i>
           </button>
-          <button class='btn btn-warning' *ngIf="false">
+          <button class='btn btn-warning' *ngIf="todo.done" (click)="marked(todo, false)">
             <i class='fas fa-undo'></i>
           </button>
-          <button class='btn btn-danger' *ngIf="false">
+          <button class='btn btn-danger' *ngIf="todo.done">
             <i class='fas fa-trash'></i>
           </button>
         </td>
