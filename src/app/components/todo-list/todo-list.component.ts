@@ -31,4 +31,12 @@ export class TodoListComponent implements OnInit {
         console.log(error);
       })
   }
+  remove(todo) {
+    this.TodoSrevice.delete(todo).then(
+      () => {
+        this.ngOnInit();
+      }, (error: any) => {
+        console.log(error);
+      })
+  }
 }

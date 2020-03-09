@@ -15,7 +15,7 @@
           <button class='btn btn-warning' *ngIf="todo.done" (click)="marked(todo, false)">
             <i class='fas fa-undo'></i>
           </button>
-          <button class='btn btn-danger' *ngIf="todo.done">
+          <button class='btn btn-danger' *ngIf="todo.done" (click)="remove(todo)">
             <i class='fas fa-trash'></i>
           </button>
         </td>

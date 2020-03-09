@@ -17,4 +17,7 @@ export class TodoSrevice {
       headers: {"Content-Type": "application/x-www-form-urlencoded"},
       body: new URLSearchParams({...todo, done: choice})})
   }
+  public delete(todo): Promise<any> {
+    return fetch(`http://localhost:3003/api/todos/${todo._id}`, {method: "DELETE"})
+  }
 }
