@@ -19,4 +19,10 @@ export class TodoSrevice {
   public delete(todo): Promise<any> {
     return fetch(`http://localhost:3003/api/todos/${todo._id}`, {method: "DELETE"})
   }
+  public add(description): Promise<any> {
+    return fetch(`http://localhost:3003/api/todos/`, {
+      method: "POST",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body: new URLSearchParams({description})})
+  }
 }
